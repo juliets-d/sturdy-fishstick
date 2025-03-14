@@ -1,54 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dia da Mulher</title>
+    <title>Final da Champions</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #fce4ec;
-            color: #880e4f;
-            margin: 0;
-            padding: 0;
+            margin: 50px;
         }
-
-        h1 {
-            margin-top: 50px;
-            font-size: 2.5rem;
-        }
-
-        .flower {
-            font-size: 4rem;
+        .emoji-btn {
+            font-size: 24px;
+            margin: 10px;
+            padding: 10px;
             cursor: pointer;
-            margin-top: 20px;
-            transition: transform 0.3s ease;
-        }
-
-        .flower:hover {
-            transform: scale(1.2);
-        }
-
-        .message {
-            display: none;
-            font-size: 1.5rem;
-            margin-top: 20px;
+            border: none;
+            background: none;
         }
     </style>
 </head>
 <body>
-    <h1>Feliz Dia da Mulher, Mãe!</h1>
-    <p>Clique na flor abaixo para ler minha mensagem especial para você:</p>
-    <div class="flower" onclick="showMessage()">🌸</div>
-    <p class="message" id="specialMessage">
-        Saiba que você é uma pessoa muito especial, batalhadora e um ser cheio de luz. Amo a senhora do tamanho do universo. Eu te amo, mainha!
-    </p>
+    <h1>Final da Champions: Real x Barça</h1>
+    <p>Clique no emoji de quantos gols o Barça vai fazer:</p>
+    
+    <button class="emoji-btn" onclick="checkGoal(0)">0️⃣</button>
+    <button class="emoji-btn" onclick="checkGoal(1)">1️⃣</button>
+    <button class="emoji-btn" onclick="checkGoal(2)">2️⃣</button>
+    <button class="emoji-btn" onclick="checkGoal(3)">3️⃣</button>
+    
+    <p id="message"></p>
 
     <script>
-        function showMessage() {
-            const message = document.getElementById('specialMessage');
-            message.style.display = 'block';
+        function checkGoal(gol) {
+            if (gol === 1) {
+                document.getElementById("message").innerHTML = 
+                    "Estou com saudades, espero que tenha tido um ótimo dia ❤️🌹";
+            } else {
+                alert("Ops! Só pode escolher a opção 1️⃣");
+            }
         }
     </script>
 </body>
